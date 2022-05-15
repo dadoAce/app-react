@@ -34,7 +34,7 @@ export default function Login({navigation}) {
                 right={<TextInput.Icon name="eye"/>
             }
             />
-             <Text style={{color: 'blue',marginBottom: 40}}
+             <Text style={{color: 'red',marginBottom: 40}}
                    onPress={() => Linking.openURL('http://google.com')}>
                    ¿Olvidaste tu contraseña?
              </Text>
