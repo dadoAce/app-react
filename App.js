@@ -13,20 +13,12 @@ export default function App() {
 
     <NavigationContainer>
 
-      <Stack.Navigator initialRouteName='Login' >
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Dashboard" component={Dashboard} />
+      <Stack.Navigator initialRouteName='Login' screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Login" component={Login}  />
+        <Stack.Screen name="Dashboard" component={Dashboard}  />
       </Stack.Navigator>
     </NavigationContainer>
 
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+ 
