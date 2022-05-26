@@ -66,6 +66,7 @@ export const styles_base = StyleSheet.create({
     fontWeight: 600,
     fontSize: 40
   }
+ 
 });
 
 export const colores = StyleSheet.create({
