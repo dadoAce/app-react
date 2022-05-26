@@ -3,6 +3,10 @@ import { Button } from 'react-native-paper';
 import { TextInput, Title, Headline } from 'react-native-paper';
 import { useState } from 'react';
 import { styles_base, colores } from '../../styles/estilosGeneral';
+import * as React from 'react';
+import { Appbar } from 'react-native-paper';
+
+
 
 
 
@@ -13,14 +17,15 @@ export default function Signup({ navigation }) {
     return (
 
         <View style={styles_base.container}>
+              <Appbar.Header style={{ backgroundColor: '#fff' }}>
+              
 
+              </Appbar.Header>
+              
            
-        <View style={{ flex: 2, height: "100%", justifyContent: "flex-end" }}>
-         <View>             
-             <Image
-                            style={{ width: 35, height: 30, padding: 10, marginBottom: 85}}
-                            source={require("./../../assets/vectorflecha.png")}
-                        />
+        <View style={{ flex: 1, height: "100%", justifyContent: "flex-end" }}>
+                   
+             
              <Text 
                    style={{ color: '#000', marginBottom: 50, textAlign: "center", width: "100%",fontSize:35, alignItems:"center"}}>
                       
@@ -29,11 +34,10 @@ export default function Signup({ navigation }) {
 
              </Text>
 
-            
-          </View>
+          
           </View>  
 
-            <View style={[styles_base.margenLateral, { flex: 3 }]}>
+            <View style={[styles_base.margenLateral, { flex: 2 }]}>
                
 
                 <TextInput
@@ -53,31 +57,33 @@ export default function Signup({ navigation }) {
                     }
                 />
                 <TextInput
-                    label="Cinfirmar Contraseña"
+                    label="Confirmar Contraseña"
                     value={text3}
                     onChangeText={text3 => setText3(text3)}
-                    style={{ marginTop: 5, height: 50, marginBottom: 10 }}
+                    style={{ marginTop: 5, height: 50, marginBottom: 20 }}
                     secureTextEntry
                     right={<TextInput.Icon name="eye" />
                     }
                 />
-                <Text
-                    style={{ color: '#000', marginBottom: 40, textAlign: "right", width: "100%" }}
-                    onPress={() => Linking.openURL('http://google.com')}>
-                    Al hacer click en "Continuar" aceptas nuestros Términos y Condiciones asi como nuestra política de privacidad.
-                </Text>
+               
                 <Button
                     touchableOpacity
                     mode="contained"
                     onPress={() => navigation.navigate("Dashboard")}
-                    style={styles_base.boton_primario}>
+                    style={styles_base.boton_primario}
+                    >
+                        
                     <Text
                         style={styles_base.btn_txt_negro}>
                         Continuar
                     </Text>
 
                 </Button>
-
+                <Text
+                    style={{ color: '#000', marginBottom: 40, textAlign: "right", width: "100%" }}
+                    onPress={() => Linking.openURL('http://google.com')}>
+                    Al hacer click en "Continuar" aceptas nuestros Términos y Condiciones asi como nuestra política de privacidad.
+                </Text>
                 <View style={{ flex: 2, height: "100%", justifyContent: "flex-end" }}>
 
                     <Text
