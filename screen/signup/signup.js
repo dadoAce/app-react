@@ -17,35 +17,35 @@ export default function Signup({ navigation }) {
     return (
 
         <View style={styles_base.container}>
-              <Appbar.Header style={{ backgroundColor: '#fff' }}>
-              
+            <Appbar.Header style={{ backgroundColor: '#fff' }}>
+                <Appbar.BackAction onPress={() => { }} />
 
-              </Appbar.Header>
-              
-           
-        <View style={{ flex: 1, height: "100%", justifyContent: "flex-end" }}>
-                   
-             
-             <Text 
-                   style={{ color: '#000', marginBottom: 50, textAlign: "center", width: "100%",fontSize:35, alignItems:"center"}}>
-                      
-                       Crea tu cuenta para comenzar 
-                   
+            </Appbar.Header>
 
-             </Text>
 
-          
-          </View>  
+            <View style={{ flex: 1, height: "100%", justifyContent: "flex-end" }}>
+
+
+                <Text
+                    style={{ color: '#000', marginBottom: 50, textAlign: "center", width: "100%", fontSize: 35, alignItems: "center" }}>
+
+                    Crea tu cuenta para comenzar
+
+
+                </Text>
+
+
+            </View>
 
             <View style={[styles_base.margenLateral, { flex: 2 }]}>
-               
+
 
                 <TextInput
                     label="correo electronico"
                     value={text}
                     onChangeText={text => setText(text)}
                     style={{ marginTop: 5, height: 50, marginBottom: 10 }}
-                    
+
                 />
                 <TextInput
                     label="Contraseña"
@@ -65,14 +65,14 @@ export default function Signup({ navigation }) {
                     right={<TextInput.Icon name="eye" />
                     }
                 />
-               
+
                 <Button
                     touchableOpacity
                     mode="contained"
                     onPress={() => navigation.navigate("Dashboard")}
                     style={styles_base.boton_primario}
-                    >
-                        
+                >
+
                     <Text
                         style={styles_base.btn_txt_negro}>
                         Continuar
@@ -91,7 +91,7 @@ export default function Signup({ navigation }) {
                         onPress={() => Linking.openURL('http://google.com')}>
                         ¿Aun no te has registrado? Inicia seseión
                     </Text>
-                    
+
                 </View>
 
             </View>
