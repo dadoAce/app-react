@@ -28,7 +28,24 @@ export const styles_base = StyleSheet.create({
     justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
     borderRadius: 10
   },
+  boton_primario1: {
+    backgroundColor: "#FFBE00",
+    width: "100%",
+    color: "#000",
+    height: 60,
+    display: "flex",/** USAR DISTRIBUCIÓN FLEX ( METODO DE ACOMODAR COMPONENTES) */
+    flexDirection: "column", /** QUE SEA EN COLUMNA */
+    justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
+    borderRadius: 10
+    
+
+  },
+  
   btn_txt_negro:{
+    color: "#000", fontWeight: "600" 
+  },
+
+  btn_txt_negro1:{
     color: "#000", fontWeight: "600" 
   },
   scrollView: {

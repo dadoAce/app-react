@@ -14,11 +14,14 @@ export default function Signup({ navigation }) {
     const [text, setText] = useState("");
     const [text2, setText2] = useState("");
     const [text3, setText3] = useState("");
+    
     return (
 
         <View style={styles_base.container}>
-            <Appbar.Header style={{ backgroundColor: '#fff' }}>
-                <Appbar.BackAction onPress={() => { }} />
+            <Appbar.Header style={{ backgroundColor: '#fff', elevation:0}}>
+                
+                <Appbar.BackAction onPress={() => { }} color="#ffd700" size={45}/>
+               
 
             </Appbar.Header>
 
@@ -27,7 +30,7 @@ export default function Signup({ navigation }) {
 
 
                 <Text
-                    style={{ color: '#000', marginBottom: 50, textAlign: "center", width: "100%", fontSize: 35, alignItems: "center" }}>
+                    style={{ color: '#000', marginBottom: 50, textAlign: "center", width: "100%", fontWeight:650, fontSize: 30, alignItems: "center" }}>
 
                     Crea tu cuenta para comenzar
 
@@ -44,14 +47,14 @@ export default function Signup({ navigation }) {
                     label="correo electronico"
                     value={text}
                     onChangeText={text => setText(text)}
-                    style={{ marginTop: 5, height: 50, marginBottom: 10 }}
+                    style={{ marginTop: 5, height: 50, marginBottom: 15 }}
 
                 />
                 <TextInput
                     label="Contraseña"
                     value={text2}
                     onChangeText={text2 => setText2(text2)}
-                    style={{ marginTop: 5, height: 50, marginBottom: 10 }}
+                    style={{ marginTop: 5, height: 50, marginBottom: 15 }}
                     secureTextEntry
                     right={<TextInput.Icon name="eye" />
                     }
@@ -60,7 +63,7 @@ export default function Signup({ navigation }) {
                     label="Confirmar Contraseña"
                     value={text3}
                     onChangeText={text3 => setText3(text3)}
-                    style={{ marginTop: 5, height: 50, marginBottom: 20 }}
+                    style={{ marginTop: 5, height: 50, marginBottom: 25 }}
                     secureTextEntry
                     right={<TextInput.Icon name="eye" />
                     }
@@ -70,11 +73,13 @@ export default function Signup({ navigation }) {
                     touchableOpacity
                     mode="contained"
                     onPress={() => navigation.navigate("Dashboard")}
-                    style={styles_base.boton_primario}
+                    style={styles_base.boton_primario1}
+
+
                 >
 
                     <Text
-                        style={styles_base.btn_txt_negro}>
+                        style={styles_base.btn_txt_negro1}>
                         Continuar
                     </Text>
 
