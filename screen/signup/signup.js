@@ -21,8 +21,7 @@ export default function Signup({ navigation }) {
             <Appbar.Header style={{ backgroundColor: '#fff', elevation:0}}>
                 
                 <Appbar.BackAction onPress={() => { }} color="#ffd700" size={45}/>
-               
-
+            
             </Appbar.Header>
 
 
@@ -40,7 +39,7 @@ export default function Signup({ navigation }) {
 
             </View>
 
-            <View style={[styles_base.margenLateral, { flex: 2 }]}>
+            <View style={[styles_base.margenLateral, { flex: 6 }]}>
 
 
                 <TextInput
