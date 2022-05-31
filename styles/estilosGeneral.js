@@ -10,6 +10,10 @@ export const styles_base = StyleSheet.create({
   margenLateral: {
     paddingHorizontal: "5%"
   },
+  margenLateral1: {
+    paddingHorizontal: "5%"
+
+  },
   renglon_centrado: {
     display: "flex",
     flexDirection: "row",
@@ -18,7 +22,7 @@ export const styles_base = StyleSheet.create({
   columna_centrado: {
 
   },
-  boton_primario: {
+  boton_primario: {/**PRIMER PANTALLA*/
     backgroundColor: "#FFBE00",
     width: "100%",
     color: "#000",
@@ -28,7 +32,7 @@ export const styles_base = StyleSheet.create({
     justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
     borderRadius: 10
   },
-  boton_primario1: {
+  boton_primario1: {/**SEGUNDA PANTALLA*/
     backgroundColor: "#FFBE00",
     width: "100%",
     color: "#000",
@@ -40,14 +44,28 @@ export const styles_base = StyleSheet.create({
     
 
   },
-  
-  btn_txt_negro:{
+  boton_primario2: {/**TERCER PANTALLA*/
+    backgroundColor: "#FFBE00",
+    width: "100%",
+    color: "#000",
+    height: 60,
+    display: "flex",/** USAR DISTRIBUCIÓN FLEX ( METODO DE ACOMODAR COMPONENTES) */
+    flexDirection: "column", /** QUE SEA EN COLUMNA */
+    justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
+    borderRadius: 10
+    
+
+  },
+  btn_txt_negro:{/**PRIMER PANTALLA*/
     color: "#000", fontWeight: "600" 
   },
 
-  btn_txt_negro1:{
+  btn_txt_negro1:{/**SEGUNDA PANTALLA*/
     color: "#000", fontWeight: "600" 
   },
+  btn_txt_negro2:{/**TERCERA PANTALLA*/
+  color: "#000", fontWeight: "600" 
+},
   scrollView: {
     width: '100%',
     height: '100%',
