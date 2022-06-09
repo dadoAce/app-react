@@ -61,11 +61,12 @@ export default function getstarted ({ navigation }) {
                     onPress={() => navigation.navigate("Dashboard")}
                     style={styles_base.boton_primario2}
                     
+                    
                 >
 
                     <Text
                         style={styles_base.btn_txt_negro2}>
-                        Continuar
+                        Comenzar 
                     </Text>
 
                 </Button>

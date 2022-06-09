@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { styles_base, colores } from '../../styles/estilosGeneral';
 import * as React from 'react';
 import { Appbar } from 'react-native-paper';
+import { styles_basepantallas } from '../../styles/EstilosP';
 
 
 
@@ -17,7 +18,7 @@ export default function Signup({ navigation }) {
     
     return (
 
-        <View style={styles_base.container}>
+        <View style={styles_basepantallas.container}>
             <Appbar.Header style={{ backgroundColor: '#fff', elevation:0}}>
                 
                 <Appbar.BackAction onPress={() => { }} color="#ffd700" size={45}/>
@@ -25,7 +26,7 @@ export default function Signup({ navigation }) {
             </Appbar.Header>
 
 
-            <View style={{ flex: 1, height: "100%", justifyContent: "flex-end" }}>
+            <View style={{ flex: 2, height: "100%", justifyContent: "flex-end" }}>
 
 
                 <Text
@@ -39,15 +40,18 @@ export default function Signup({ navigation }) {
 
             </View>
 
-            <View style={[styles_base.margenLateral, { flex: 6 }]}>
+            <View style={[styles_basepantallas.margenLateral, { flex: 6 }]}>
 
 
                 <TextInput
                     label="correo electronico"
                     value={text}
+                    
                     onChangeText={text => setText(text)}
-                    style={{ marginTop: 5, height: 50, marginBottom: 15 }}
-
+                    style={{ marginTop: 5, height: 50, marginBottom: 15, backgroundColor: "E5E5E5", margin: 5,
+                    borderWidth: 3, borderColor: "#ECECEC",borderRadius: 8, elevation: 0,shadowOpacity:0, shadowRadius:0, shadowOffset:0,
+                    shadowColor: "black" , textDecorationLine:0}}
+                    
                 />
                 <TextInput
                     label="Contraseña"
@@ -55,8 +59,8 @@ export default function Signup({ navigation }) {
                     onChangeText={text2 => setText2(text2)}
                     style={{ marginTop: 5, height: 50, marginBottom: 15 }}
                     secureTextEntry
-                    right={<TextInput.Icon name="eye" />
-                    }
+                    
+                    
                 />
                 <TextInput
                     label="Confirmar Contraseña"
@@ -64,21 +68,21 @@ export default function Signup({ navigation }) {
                     onChangeText={text3 => setText3(text3)}
                     style={{ marginTop: 5, height: 50, marginBottom: 25 }}
                     secureTextEntry
-                    right={<TextInput.Icon name="eye" />
-                    }
+                   
+
                 />
 
                 <Button
                     touchableOpacity
                     mode="contained"
                     onPress={() => navigation.navigate("Dashboard")}
-                    style={styles_base.boton_primario1}
+                    style={styles_basepantallas.boton_continuar}
 
 
                 >
 
                     <Text
-                        style={styles_base.btn_txt_negro1}>
+                        style={styles_basepantallas.btn_texnegro}>
                         Continuar
                     </Text>
 
