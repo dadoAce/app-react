@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export const styles_basepantallas = StyleSheet.create({
-  
+
 
   container: {
     flex: 1,
@@ -32,13 +32,14 @@ export const styles_basepantallas = StyleSheet.create({
 
 boton_continuar: {/**SEG PANTALLA*/
 backgroundColor: "#FFBE00",
-width: "100%",
+width: "390",
 color: "#000",
-height: 60,
+height: 50,
 display: "flex",/** USAR DISTRIBUCIÓN FLEX ( METODO DE ACOMODAR COMPONENTES) */
 flexDirection: "column", /** QUE SEA EN COLUMNA */
 justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
-borderRadius: 10
+borderRadius: 10,
+marginBotton:25
 },
 
 scrollView: {

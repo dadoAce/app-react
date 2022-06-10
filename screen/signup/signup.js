@@ -26,11 +26,12 @@ export default function Signup({ navigation }) {
             </Appbar.Header>
 
 
-            <View style={{ flex: 2, height: "100%", justifyContent: "flex-end" }}>
+            <View style={{ flex: 3, height: "100%", justifyContent: "flex-end" }}>
 
 
                 <Text
-                    style={{ color: '#000', marginBottom: 50, textAlign: "center", width: "100%", fontWeight:650, fontSize: 30, alignItems: "center" }}>
+                    style={{ color: '#000', marginBottom: 50, textAlign: "center", width: "100%", 
+                    fontWeight:700, fontSize: 28, alignItems: "center" , fontStyle: 'normal',fontWeight: 'bold'}}>
 
                     Crea tu cuenta para comenzar
 
@@ -40,7 +41,9 @@ export default function Signup({ navigation }) {
 
             </View>
 
-            <View style={[styles_basepantallas.margenLateral, { flex: 6 }]}>
+            
+
+            <View style={[styles_basepantallas.margenLateral, { flex: 7 }]}>
 
 
                 <TextInput
@@ -50,14 +53,17 @@ export default function Signup({ navigation }) {
                     onChangeText={text => setText(text)}
                     style={{ marginTop: 5, height: 50, marginBottom: 15, backgroundColor: "E5E5E5", margin: 5,
                     borderWidth: 3, borderColor: "#ECECEC",borderRadius: 8, elevation: 0,shadowOpacity:0, shadowRadius:0, shadowOffset:0,
-                    shadowColor: "black" , textDecorationLine:0}}
+                    shadowColor: "black" , textShadowRadius: 1 }}
+                   
                     
                 />
                 <TextInput
                     label="Contraseña"
                     value={text2}
                     onChangeText={text2 => setText2(text2)}
-                    style={{ marginTop: 5, height: 50, marginBottom: 15 }}
+                    style={{ marginTop: 5, height: 50, marginBottom: 15,backgroundColor: "E5E5E5", margin: 5,
+                    borderWidth: 3, borderColor: "#ECECEC",borderRadius: 8, elevation: 0,shadowOpacity:0, shadowRadius:0, shadowOffset:0,
+                    shadowColor: "black" , textShadowRadius: 1  }}
                     secureTextEntry
                     
                     
@@ -66,7 +72,9 @@ export default function Signup({ navigation }) {
                     label="Confirmar Contraseña"
                     value={text3}
                     onChangeText={text3 => setText3(text3)}
-                    style={{ marginTop: 5, height: 50, marginBottom: 25 }}
+                    style={{ marginTop: 5, height: 50, marginBottom: 25,backgroundColor: "E5E5E5", margin: 5, 
+                    borderWidth: 3, borderColor: "#ECECEC",borderRadius: 8, elevation: 0,shadowOpacity:0, shadowRadius:0, shadowOffset:0,
+                    shadowColor: "black" , textShadowRadius: 1  }}
                     secureTextEntry
                    
 
@@ -80,7 +88,7 @@ export default function Signup({ navigation }) {
 
 
                 >
-
+                    <Text style={{fontFamily: 'Monserrat', fontStyle: 'normal', width:"105", height:"24" }}>  </Text>
                     <Text
                         style={styles_basepantallas.btn_texnegro}>
                         Continuar
@@ -88,16 +96,28 @@ export default function Signup({ navigation }) {
 
                 </Button>
                 <Text
-                    style={{ color: '#000', marginBottom: 40, textAlign: "right", width: "100%" }}
+                    style={{ color: '#565656', marginBottom: 40, textAlign: "right", width: "370", height: "68",
+                    textAlign:"center", justifyContent: "center"}}
                     onPress={() => Linking.openURL('http://google.com')}>
-                    Al hacer click en "Continuar" aceptas nuestros Términos y Condiciones asi como nuestra política de privacidad.
+                   <Text>
+                   Al hacer click en "Continuar" aceptas nuestros
+                   </Text>
+                   <Text style= {{textDecorationLine: 'underline'}}>
+                     Términos y Condiciones asi como nuestra política de privacidad.
+                     </Text>
                 </Text>
-                <View style={{ flex: 2, height: "100%", justifyContent: "flex-end" }}>
+
+                <View style={{ flex: 3, height: "100%", justifyContent: "center" }}>
 
                     <Text
                         style={{ color: '#565656', marginBottom: 10, textAlign: "center" }}
                         onPress={() => Linking.openURL('http://google.com')}>
-                        ¿Aun no te has registrado? Inicia seseión
+                            <Text style= {{width:"154", height:"20" }}>
+                            ¿Aun no te has registrado?
+                            </Text>
+                            <Text style= {{textDecorationLine: 'underline', fontWeight: 'bold',width:"92", height:"20" }}>
+                            Inicia Sesión
+                            </Text>
                     </Text>
 
                 </View>
