@@ -110,7 +110,7 @@ export default function Signup({ navigation }) {
                 <View style={{ flex: 3, height: "100%", justifyContent: "center" }}>
 
                     <Text
-                        style={{ color: '#565656', marginBottom: 10, textAlign: "center" }}
+                        style={{ color: '#565656', marginBottom: 10, textAlign: "center"}}
                         onPress={() => Linking.openURL('http://google.com')}>
                             <Text style= {{width:"154", height:"20" }}>
                             ¿Aun no te has registrado?
