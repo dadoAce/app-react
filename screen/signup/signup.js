@@ -107,7 +107,7 @@ export default function Signup({ navigation }) {
                      </Text>
                 </Text>
 
-                <View style={{ flex: 3, height: "100%", justifyContent: "center" }}>
+                <View style={{ flex: 3, height: "100%", justifyContent: "center", paddingTop:"10%", paddingBottom:"5%"}}>
 
                     <Text
                         style={{ color: '#565656', marginBottom: 10, textAlign: "center"}}
