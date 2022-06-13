@@ -1,10 +1,8 @@
 import { ImageBackground, Text, View, Image, Linking, ScrollView } from 'react-native';
 import { Button } from 'react-native-paper';
-import { TextInput, Title, Headline } from 'react-native-paper';
-import { useState } from 'react';
-import { styles_base, colores } from '../../styles/estilosGeneral';
 import * as React from 'react';
 import { Appbar } from 'react-native-paper';
+import { styles_basepantallas } from '../../styles/EstilosP';
 
 
 
@@ -13,69 +11,78 @@ export default function getstarted ({ navigation }) {
   
     
     return (
-        <View style={styles_base.container}>
+        
+        <View style={styles_basepantallas.container}>
+            <ScrollView>
             <Appbar.Header style={{ backgroundColor: '#fff', elevation:0}}>
                 
                 <Appbar.BackAction onPress={() => { }} color="#ffd700" size={45}/>
                
 
             </Appbar.Header>
-
-            <View style={{ flex: 2, height: "100%", justifyContent: "flex-center", padding: "5%"}}>
+        
+            <View style={{ flex:8, height: "100%", justifyContent: "100%", 
+                           padding: "5%",display: "100%"}}>
 
                 <Text
-                    style={{ color: '#000', marginBottom: 10, 
-                             textAlign: "left", width: "100%", 
-                             fontWeight:650, fontSize: 30, alignItems: "left"
-                              }}>
+                   style={{ color: '#000', marginBottom:10 , width: "100%", 
+                   fontWeight:700, fontSize: 28, fontStyle: 'normal',fontWeight: 'bold'}}>
 
                    Cuentanos mas de tu negocio
 
                 </Text>
                 <Text
-                    style={{ color: '#000', 
-                             marginBottom:100 , 
+                    style={{ color: '##707070', 
+                             marginBottom:20, 
                              textAlign: "left", width: "100%", 
                              fontWeight:400, fontSize: 13, 
-                             alignItems: "center" 
+                             alignItems: "center" ,
+                             width: "100%", height: 51, flex: "center"
 
                              }}>
 
-                    No compartiremos esta información con nadie. La información que solicitamos es para generar tus estimados personalizados y brindarte una mejor experiencia.
+                    No compartiremos esta información con nadie. La información que solicitamos es 
+                    para generar tus estimados personalizados y brindarte una mejor experiencia.
 
                 </Text>
 
             
-                    <View style={{ flex: 2, height: "100%", justifyContent: "center", alignItems: "center", width: "100%"}}> 
+                    <View style={{ height: "100%", justifyContent: "center", 
+                          alignItems: "center", width: "100%"}}> 
+                       <ImageBackground>
                         <Image
-                            style={{ width: 250, height: 250, padding: 10, resizeMode: 'strech'}}
+                            style={{ width: 319, height: 285, textAlign:"center"}}
                             source={require("./../../assets/getstarted.png")}
 
                         />
+                        </ImageBackground>
                     </View>
-               <View style={{ flex: 2, height: "100%", justifyContent: "flex-end" }}>
+               <View style={{flex:2, height: "100%", justifyContent: "center", paddingTop:"5%", paddingBottom:"5%"}}>
                 <Button 
                     touchableOpacity
-                    alignItems= 'Flex-end'
+                    marginBottom="5"
+                    alignItems= 'Flex-center'
                     mode="contained"
                     onPress={() => navigation.navigate("Dashboard")}
-                    style={styles_base.boton_primario2}
-                    
+                    style={styles_basepantallas.boton_comenzar}
                     
                 >
-
+                    <Text style={{fontFamily: 'Monserrat', fontStyle: 'normal', width:"105", height:"24" }}> 
+                     </Text>
                     <Text
-                        style={styles_base.btn_txt_negro2}>
-                        Comenzar 
+                        style={styles_basepantallas.btn_texnegro}>
+                        Comenzar
                     </Text>
 
                 </Button>
                
                 </View>
             </View>  
-
+           
+            </ScrollView>
         </View>
-
+        
+       
     );
 
 
