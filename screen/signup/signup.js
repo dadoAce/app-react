@@ -48,8 +48,8 @@ export default function Signup({ navigation }) {
 
                 <TextInput
                     label="correo electronico"
+                    underlineColor='transparent'
                     value={text}
-                    
                     onChangeText={text => setText(text)}
                     style={{ marginTop: 5, height: 50, marginBottom: 15, backgroundColor: "E5E5E5", margin: 5,
                     borderWidth: 3, borderColor: "#ECECEC",borderRadius: 8, elevation: 0,shadowOpacity:0, shadowRadius:0, shadowOffset:0,
@@ -59,6 +59,7 @@ export default function Signup({ navigation }) {
                 />
                 <TextInput
                     label="Contraseña"
+                    underlineColor='transparent'
                     value={text2}
                     onChangeText={text2 => setText2(text2)}
                     style={{ marginTop: 5, height: 50, marginBottom: 15,backgroundColor: "E5E5E5", margin: 5,
@@ -70,6 +71,7 @@ export default function Signup({ navigation }) {
                 />
                 <TextInput
                     label="Confirmar Contraseña"
+                    underlineColor='transparent'
                     value={text3}
                     onChangeText={text3 => setText3(text3)}
                     style={{ marginTop: 5, height: 50, marginBottom: 25,backgroundColor: "E5E5E5", margin: 5, 

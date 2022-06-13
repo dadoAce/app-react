@@ -12,9 +12,9 @@ import { ScrollView } from 'react-native-web';
 
 export default function getstarted ({ navigation }) {
 
-    const [text4, setText4] = useState("");
-    const [text5, setText5] = useState("");
-    const [text6, setText6] = useState("");
+    const [text7, setText7] = useState("");
+    const [text8, setText8] = useState("");
+    const [text9, setText9] = useState("");
   
     
     return (
@@ -47,8 +47,9 @@ export default function getstarted ({ navigation }) {
                      
                     <TextInput
                      label="Nombre"
-                     value={text4}
-                     onChangeText={text4 => setText4(text4)}
+                     underlineColor='transparent'
+                     value={text7}
+                     onChangeText={text7 => setText7(text7)}
                      style={{ marginTop: 5, height: 50, marginBottom: 15, backgroundColor: '#fff', 
                      borderBottomColor: '#ECECEC', borderRadius: 50,  margin: 5,
                      borderWidth: 3, borderColor: "#ECECEC", borderRadius: 8, elevation: 0,shadowOpacity:0, 
@@ -57,8 +58,9 @@ export default function getstarted ({ navigation }) {
                     
                     <TextInput
                      label="Apellido"
-                     value={text5}
-                     onChangeText={text5 => setText5(text5)}
+                     underlineColor='transparent'
+                     value={text8}
+                     onChangeText={text8 => setText8(text8)}
                      style={{ marginTop: 5, height: 50, marginBottom: 15, backgroundColor: '#fff', 
                      borderBottomColor: '#ECECEC', borderRadius: 50,  margin: 5,
                      borderWidth: 3, borderColor: "#ECECEC", borderRadius: 8, elevation: 0,shadowOpacity:0, 
@@ -66,8 +68,9 @@ export default function getstarted ({ navigation }) {
                     />
                     <TextInput
                      label="Compañia (Opcional)"
-                     value={text6}
-                     onChangeText={text6 => setText6(text6)}
+                     underlineColor='transparent'
+                     value={text9}
+                     onChangeText={text9 => setText9(text9)}
                      style={{  marginTop: 5, height: 50, marginBottom: 15, backgroundColor: '#fff', 
                      borderBottomColor: '#ECECEC', borderRadius: 50,  margin: 5,
                      borderWidth: 3, borderColor: "#ECECEC", borderRadius: 8, elevation: 0,shadowOpacity:0, 
