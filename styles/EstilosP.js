@@ -58,7 +58,7 @@ marginBotton:100
 
 },
 
-boton_siguiente: {/** CUARTA PANTALLA*/
+boton_siguiente: {/** CUARTA PANTALLA 1/4*/
 backgroundColor: "#FFBE00",
 width: "390",
 color: "#000",
@@ -70,6 +70,47 @@ borderRadius: 10,
 marginBotton:100
 
 },
+
+boton_siguiente1: {/** QUINTA PANTALLA 2/4*/
+backgroundColor: "#FFBE00",
+width: "390",
+color: "#000",
+height: 50,
+display: "flex",/** USAR DISTRIBUCIÓN FLEX ( METODO DE ACOMODAR COMPONENTES) */
+flexDirection: "column", /** QUE SEA EN COLUMNA */
+justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
+borderRadius: 10,
+marginBotton:100
+
+},
+
+boton_siguiente2: {/** SEXTA PANTALLA 3/4*/
+backgroundColor: "#FFBE00",
+width: "390",
+color: "#000",
+height: 50,
+display: "flex",/** USAR DISTRIBUCIÓN FLEX ( METODO DE ACOMODAR COMPONENTES) */
+flexDirection: "column", /** QUE SEA EN COLUMNA */
+justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
+borderRadius: 10,
+marginBotton:100
+
+},
+
+boton_siguiente3: {/** SEPTIMA PANTALLA 4/4*/
+backgroundColor: "#FFBE00",
+width: "390",
+color: "#000",
+height: 50,
+display: "flex",/** USAR DISTRIBUCIÓN FLEX ( METODO DE ACOMODAR COMPONENTES) */
+flexDirection: "column", /** QUE SEA EN COLUMNA */
+justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
+borderRadius: 10,
+marginBotton:100
+
+},
+
+
 primario: {
   color: "#FFBE00"
 },
