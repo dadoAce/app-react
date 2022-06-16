@@ -64,9 +64,7 @@ export default function getstarted ({ navigation }) {
                     alignItems= 'Flex-center'
                     mode="contained"
                     onPress={() => navigation.navigate("Dashboard")}
-                    style={styles_basepantallas.boton_comenzar}
-                    
-                >
+                    style={styles_basepantallas.boton_comenzar}>
                     <Text style={{fontFamily: 'Monserrat', fontStyle: 'normal', width:"105", height:"24" }}> 
                      </Text>
                     <Text
