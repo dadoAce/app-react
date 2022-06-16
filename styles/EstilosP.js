@@ -9,8 +9,9 @@ export const styles_basepantallas = StyleSheet.create({
     width: '100%',
     height: '100%',
     display:"flex",
-    
+    margenLateral: "5%"
   },
+  
   margenLateral: {
     paddingHorizontal: "3%"
   },

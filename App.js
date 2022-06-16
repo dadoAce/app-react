@@ -7,7 +7,7 @@ import Dashboard from './screen/dashboard/dashboard';
 import signup from './screen/signup/signup';
 import getstarted from './screen/getstarted/getstarted';
 import companyname from './screen/companyname/companyname'; 
-
+import signup_complet from './screen/signup_complet/signup_complet';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,8 +16,8 @@ export default function App() {
 
     <NavigationContainer>
 
-      <Stack.Navigator initialRouteName='companyname' screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="companyname" component={companyname}  />
+      <Stack.Navigator initialRouteName='signup_complet' screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="signup_complet" component={signup_complet}  />
         <Stack.Screen name="Dashboard" component={Dashboard}  />
       </Stack.Navigator>
     </NavigationContainer>
