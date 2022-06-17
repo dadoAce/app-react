@@ -1,11 +1,16 @@
-import { ImageBackground, Text, View, Image, Linking, ScrollView } from 'react-native';
-import { Button } from 'react-native-paper';
+import { ImageBackground, Text, View, Image, ScrollView, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { Button, TextInput } from 'react-native-paper';
 import * as React from 'react';
 import { Appbar } from 'react-native-paper';
 import { styles_basepantallas } from '../../styles/EstilosP';
-import {keyboardAccessotyView} from 'react-native-keyboard-accessory'
 
 
+
+const Dismisskeyboard = ({ children }) => (
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      {children}
+    </TouchableWithoutFeedback>
+  );
 
 export default function signup_complet ({ navigation }) {
     
@@ -22,11 +27,11 @@ export default function signup_complet ({ navigation }) {
 
         </Appbar.Header>
         
-        <View style={{ flex:8, height: "100%", justifyContent: "100%", 
+        <View style={{ flex:5, height: "100%", justifyContent: "100%", 
                            padding: "5%",display: "100%"}}>
 
             <Text
-                   style={{ color: '#000', marginBottom:20 , width: "100%", 
+                   style={{ color: '#000', marginBottom:10 , width: "100%", 
                    fontWeight:700, fontSize: 28, fontStyle: 'normal',fontWeight: 'bold'}}>
 
                    Verifica tu cuenta 
@@ -44,16 +49,36 @@ export default function signup_complet ({ navigation }) {
                         />
                         </ImageBackground>
                     </View>
-         <View>
-            <keyboardAccessotyView>
-    
 
-            </keyboardAccessotyView>
+            <Dismisskeyboard>
+             <View style= {[styles_basepantallas.margenLateral, { flex: 6 , justifyContent: "flex-end"}]}>
+
+                 <TextInput label="Numero Telefonico"
+                            placeholder='numbers'
+                            keyboardType='numeric'
+                            underlineColor='transparent'
+                            style={{ marginTop: 5, height: 55, marginBottom: 15,backgroundColor: "E5E5E5", margin: 5,
+                            borderWidth: 3, borderColor: "#ECECEC",borderRadius: 8, 
+                            shadowColor: "black" , textShadowRadius: 1, boton_continuar1: 'flex'  }}
+                            
+                            />
+
+                    <Button
+                    touchableOpacity
+                    mode="contained"
+                    onPress={() => navigation.navigate("Dashboard")}
+                    style={styles_basepantallas.boton_continuar1}>
+                    
+                    <Text style={{ fontStyle: 'normal', borderRadius: 10, justifyContent: '' }}>  
+                    <Text
+                        style={styles_basepantallas.btn_texnegro}>
+                        Continuar
+                    </Text>
+                    </Text>
+                </Button>
          
-
-
-            
-            </View>        
+             </View>        
+            </Dismisskeyboard>
 
     </ScrollView>
 </View>

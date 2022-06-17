@@ -46,6 +46,18 @@ justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
 borderRadius: 10,
 marginBotton:25
 },
+boton_continuar1: {/**PANTALLA VERIFICAR CUENTA*/
+backgroundColor: "#FFBE00",
+width: 145,
+color: "#000",
+height: 50,
+display: "flex",/** USAR DISTRIBUCIÓN FLEX ( METODO DE ACOMODAR COMPONENTES) */
+flexDirection: "column", /** QUE SEA EN COLUMNA */
+justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
+borderRadius: 10,
+marginBotton:25
+},
+
 boton_comenzar: {/** TERCER PANTALLA*/
 backgroundColor: "#FFBE00",
 width: "390",
