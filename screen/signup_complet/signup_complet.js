@@ -69,14 +69,16 @@ export default function signup_complet ({ navigation }) {
                     onPress={() => navigation.navigate("Dashboard")}
                     style={styles_basepantallas.boton_continuar1}>
                     
-                    <Text style={{ fontStyle: 'normal', borderRadius: 10, justifyContent: '' }}>  
+                    <Text style={{ fontStyle: 'normal', borderRadius: 10, justifyContent: 'between' }}>  
                     <Text
                         style={styles_basepantallas.btn_texnegro}>
                         Continuar
                     </Text>
                     </Text>
                 </Button>
-         
+                
+             
+
              </View>        
             </Dismisskeyboard>
 

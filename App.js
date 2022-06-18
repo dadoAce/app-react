@@ -8,6 +8,7 @@ import signup from './screen/signup/signup';
 import getstarted from './screen/getstarted/getstarted';
 import companyname from './screen/companyname/companyname'; 
 import signup_complet from './screen/signup_complet/signup_complet';
+import enter_code from './screen/enter_code/enter_code';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,8 +17,8 @@ export default function App() {
 
     <NavigationContainer>
 
-      <Stack.Navigator initialRouteName='signup_complet' screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="signup_complet" component={signup_complet}  />
+      <Stack.Navigator initialRouteName='enter_code' screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="enter_code" component={enter_code}  />
         <Stack.Screen name="Dashboard" component={Dashboard}  />
       </Stack.Navigator>
     </NavigationContainer>
