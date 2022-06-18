@@ -46,6 +46,7 @@ justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
 borderRadius: 10,
 marginBotton:25
 },
+
 boton_continuar1: {/**PANTALLA VERIFICAR CUENTA*/
 backgroundColor: "#FFBE00",
 width: 145,
@@ -123,6 +124,32 @@ marginBotton:100
 
 },
 
+boton_prueba_continuar:{
+
+  backgroundColor: "#FFBE00",
+  width: "390",
+  color: "#000",
+  height: 50,
+  display: "flex", /** USAR DISTRIBUCIÓN FLEX ( METODO DE ACOMODAR COMPONENTES) */
+  flexDirection: "column", /** QUE SEA EN COLUMNA */
+  justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
+  borderRadius: 10,
+  marginBotton:100
+
+},
+
+boton_verificarcuenta: {/** SEPTIMA PANTALLA 4/4*/
+backgroundColor: "#FFBE00",
+width: "390",
+color: "#000",
+height: 50,
+display: "flex",/** USAR DISTRIBUCIÓN FLEX ( METODO DE ACOMODAR COMPONENTES) */
+flexDirection: "column", /** QUE SEA EN COLUMNA */
+justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
+borderRadius: 10,
+marginBotton:100
+
+},
 
 primario: {
   color: "#FFBE00"

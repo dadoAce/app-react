@@ -86,10 +86,7 @@ export default function Signup({ navigation }) {
                     touchableOpacity
                     mode="contained"
                     onPress={() => navigation.navigate("Dashboard")}
-                    style={styles_basepantallas.boton_continuar}
-
-
-                >
+                    style={styles_basepantallas.boton_continuar} >
                     <Text style={{fontFamily: 'Monserrat', fontStyle: 'normal', width:"105", height:"24" }}>  </Text>
                     <Text
                         style={styles_basepantallas.btn_texnegro}>
@@ -121,8 +118,8 @@ export default function Signup({ navigation }) {
                             Inicia Sesión
                             </Text>
                     </Text>
-
                 </View>
+              
 
             </View>
         </View>
