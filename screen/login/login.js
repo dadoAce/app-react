@@ -4,12 +4,19 @@ import { Button } from 'react-native-paper';
 import { TextInput, Title, Headline } from 'react-native-paper';
 import { useState } from 'react';
 import { styles_base, colores } from '../../styles/estilosGeneral';
+import { iniciarSesion } from './login_api';
 
 
 
 export default function Login({ navigation }) {
-    const [text, setText] = useState("");
-    const [text2, setText2] = useState("");
+    const [correo, setCorreo] = useState("");
+    const [password, setPassword] = useState("");
+
+    const inicioSesion = () => {
+        let resul = iniciarSesion(correo, password);
+    }
+
+
     return (
 
         <View style={styles_base.container}>
@@ -17,9 +24,7 @@ export default function Login({ navigation }) {
                 resizeMode="stretch"
                 style={[styles_base.portada_login, { flex: 2, height: "100%" }]}> {/* COMENTARIO: LOS NUMEROS EN FLEX SICNIFICAN EL ESPACIO QUE DEBEN DE TENER, POR EJEMPLO AQUI ES 2 DE 5 PARTES, EL OTRO 3 ESTA EN LA VIEW DE ABAJO  */}
                 <View style={styles_base.portada_distribucion}>
-
                     <View style={styles_base.renglon_centrado}>
-
                         <Image
                             style={{ width: 70, height: 70, padding: 10 }}
                             source={require("./../../assets/logo_maistro.svg")}
@@ -40,14 +45,14 @@ export default function Login({ navigation }) {
 
                 <TextInput
                     label="correo electronico"
-                    value={text}
-                    onChangeText={text => setText(text)}
+                    value={correo}
+                    onChangeText={text => setCorreo(text)}
                     style={{ marginTop: 5, height: 50 }}
                 />
                 <TextInput
                     label="Contraseña"
-                    value={text2}
-                    onChangeText={text2 => setText2(text2)}
+                    value={password}
+                    onChangeText={text2 => setPassword(text2)}
                     style={{ marginTop: 5, height: 50, marginBottom: 10 }}
                     secureTextEntry
                     right={<TextInput.Icon name="eye" />
@@ -61,7 +66,7 @@ export default function Login({ navigation }) {
                 <Button
                     touchableOpacity
                     mode="contained"
-                    onPress={() => navigation.navigate("Dashboard")}
+                    onPress={() => inicioSesion()}
                     style={styles_base.boton_primario}>
                     <Text
                         style={styles_base.btn_txt_negro}>
@@ -74,21 +79,23 @@ export default function Login({ navigation }) {
 
                     <Text
                         style={{ color: '#565656', marginBottom: 10, textAlign: "center" }}
-                        onPress={() => Linking.openURL('http://google.com')}>
+                    >
                         ¿Aun no te has registrado?
                     </Text>
                     <Button
                         touchableOpacity
-                        mode="contained" onPress={() => navigation.navigate("Dashboard")} color="yellow"
+                        mode="contained"
+                        color="yellow"
                         style={{
                             marginBottom: 10, backgroundColor: 'white',
                             borderRadius: 10,
                             borderWidth: 1,
-                            borderColor: '#FFBE00' 
+                            borderColor: '#FFBE00'
                         }}
+                        onPress={() => navigation.navigate("signup")}
                     >
                         <Text
-                            style={{color:"#FFBE00"}}>
+                            style={{ color: "#FFBE00" }}>
                             Registrarse
                         </Text>
                     </Button>
