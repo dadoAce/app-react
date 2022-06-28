@@ -12,7 +12,7 @@ const Dismisskeyboard = ({ children }) => (
     </TouchableWithoutFeedback>
   );
 
-export default function signup_complet ({ navigation }) {
+export default function Signup_complet ({ navigation }) {
     
     
     
@@ -51,7 +51,7 @@ export default function signup_complet ({ navigation }) {
                     </View>
 
             <Dismisskeyboard>
-             <View style= {[styles_basepantallas.margenLateral, { flex: 6 , justifyContent: "flex-end"}]}>
+             <View style= {[styles_basepantallas.margenLateralBase, { flex: 6 , justifyContent: "flex-end"}]}>
 
                  <TextInput label="Numero Telefonico"
                             placeholder='numbers'

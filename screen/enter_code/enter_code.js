@@ -8,7 +8,7 @@ import { styles_basepantallas } from '../../styles/EstilosP';
 
 
 
-export default function signup_complet ({ navigation }) {
+export default function Enter_code ({ navigation }) {
     
     
     
@@ -72,7 +72,7 @@ export default function signup_complet ({ navigation }) {
                     mode="contained"
                     onPress={() => navigation.navigate("Dashboard")}
                     style={styles_basepantallas.boton_verificarcuenta} >
-                    <Text style={{fontFamily: 'Monserrat', fontStyle: 'normal', width:"105", height:"24" }}>  </Text>
+                    <Text style={{  fontStyle: 'normal', width:"105", height:"24" }}>  </Text>
                     <Text
                         style={styles_basepantallas.btn_texnegro}>
                         verificar cuenta

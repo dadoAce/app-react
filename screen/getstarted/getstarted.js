@@ -61,11 +61,11 @@ export default function getstarted ({ navigation }) {
                 <Button 
                     touchableOpacity
                     marginBottom="5"
-                    alignItems= 'Flex-center'
+                    alignItems= 'center'
                     mode="contained"
                     onPress={() => navigation.navigate("Dashboard")}
                     style={styles_basepantallas.boton_comenzar}>
-                    <Text style={{fontFamily: 'Monserrat', fontStyle: 'normal', width:"105", height:"24" }}> 
+                    <Text style={{ fontStyle: 'normal', width:"105", height:"24" }}> 
                      </Text>
                     <Text
                         style={styles_basepantallas.btn_texnegro}>
