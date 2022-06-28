@@ -72,7 +72,7 @@ export default function Login({ navigation }) {
                     </Text>
                     <Button
                         touchableOpacity
-                        mode="contained" onPress={() => navigation.navigate("Registro")} color="yellow"
+                        mode="contained" onPress={() => navigation.navigate("Signup")} color="yellow"
                         style={{
                             marginBottom: 10, backgroundColor: 'white',
                             borderRadius: 10,

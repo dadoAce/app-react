@@ -9,19 +9,21 @@ import { styles_base } from '../../styles/estilosGeneral';
 import * as valores from '../../styles/valoresBase'
 import { listaIndustria } from './listaIndustria';
 import { listaEstados } from './listaEstados';
+import { registro } from './registro_api';
 
 
 
-export default function Registro({ navigation }) {
-
+export default function Registro({ route, navigation, ...props }) {
+ 
+  console.log(route)
+  let correo = route.params.datos.correo;
+  let pass = route.params.datos.password;
   const [paso, setPaso] = useState(1);
-
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("")
-  const [company, setCompany] = useState("")
+  const [nombre, setNombre] = useState("Alfonso");
+  const [apellido, setApellido] = useState("Acevedo")
+  const [company, setCompany] = useState("dadoroom")
   const [industria, setIndustria] = useState("");
   const [Ubicacion, setUbicacion] = useState("");
-  const [text11, setText11] = useState("");
 
   const inputNombre = (text) => {
     setNombre(text);
@@ -51,29 +53,9 @@ export default function Registro({ navigation }) {
 
     </ProgressBar>
   }
-
-  const ComponenterSuperior = () => {
-    if (paso == 1) {
-      return "Información basica de ti y tu negocio";
-    } else
-      if (paso == 2) {
-        return "¿En que industria trabajas?";
-      } else
-        if (paso == 3) {
-          return "¿En que estado te ubicas?";
-
-        } else
-          if (paso == 4) {
-            return "¿En que estado te ubicas?";
-
-          }
-
-  }
-
-
   const back = () => {
     if (paso == 1) {
-
+      navigation.navigate("Getstarted")
     } else
       if (paso == 2) {
         setPaso(1)
@@ -102,8 +84,16 @@ export default function Registro({ navigation }) {
 
         } else
           if (paso == 4) {
-           
-
+            let datos = {
+              "nombre": nombre,
+              "apellido": apellido,
+              "compania": company,
+              "industria": industria,
+              "Ubicacion": Ubicacion,
+              "correo": correo,
+              "pass": pass
+            }
+            registro(datos)
           }
   }
 
@@ -237,6 +227,12 @@ export default function Registro({ navigation }) {
           }
           {paso == 4 && (
             <>
+              <TextInput
+                disabled
+                label="Correo"
+                underlineColor='transparent'
+                value={correo}
+                style={[styles_base.inputRegistro]} />
               <TextInput
                 disabled
                 label="Nombre"

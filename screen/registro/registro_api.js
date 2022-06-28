@@ -1,27 +1,28 @@
- 
+export const registro = (datos) => {
+    console.log({datos})
+    var url = 'https://www.dadoroom.com/maistro/Usuario/registrar';
+    var data = {
+        "correo": datos.correo,
+        "password": datos.pass,
+        "rol": datos.rol,
+        "nombre": datos.nombre,
+        "apellido": datos.apellido,
+        "compania": datos.compania,
+        "industria": datos.industria,
+        "estado": datos.Ubicacion,
+        "industria": datos.industria
+    };
 
-async function _getSucursales(datos) {
-
-    
-    try {
-
-        let api = 'https://api.dev.ancona.iikno.com/Sucursales?USUARIO='
-            + usuario.NombreUsuario
-            + '&TOKEN=' + usuario.Token;
-
-        var resp = await fetch(api);
-        var response = await resp.json();
-        return response;
-
-    } catch (error) {
-        console.log(error)
-        return false;
-
-    }
-    return [];
-
+    console.log({ data })
+    fetch(url, {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(data), // data can be `string` or {object}!
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => {
+        console.log(res.json())
+    })
+        .catch(error => console.error('Error:', error))
+        .then(response => console.log('Success:', response));
 }
-export { _getSucursales };
-/***
- *   
- */
