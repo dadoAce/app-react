@@ -22,23 +22,11 @@ export default function Login({ navigation }) {
         <View style={styles_base.container}>
             <ImageBackground source={require("./../../Inicio.png")}
                 resizeMode="stretch"
-                style={[styles_base.portada_login, { flex: 2, height: "100%" }]}> {/* COMENTARIO: LOS NUMEROS EN FLEX SICNIFICAN EL ESPACIO QUE DEBEN DE TENER, POR EJEMPLO AQUI ES 2 DE 5 PARTES, EL OTRO 3 ESTA EN LA VIEW DE ABAJO  */}
-                <View style={styles_base.portada_distribucion}>
-                    <View style={styles_base.renglon_centrado}>
-                        <Image
-                            style={{ width: 70, height: 70, padding: 10 }}
-                            source={require("./../../assets/logo_maistro.svg")}
-                        />
-                        <View style={{ paddingHorizontal: 10 }}>
-                            <Headline style={styles_base.portada_Maistro}>Maistro</Headline>
-                            <Text style={styles_base.portada_subtitulo}>La manera mas facil de administrar tu negocio</Text>
-                        </View>
-                    </View>
-                    <Text style={styles_base.portada_titulo}>Iniciar sesión</Text>
-                </View>
+                style={[styles_base.portada_login, { flex: 2, height: "100%" }]}>  
+             
             </ImageBackground>
 
-            <View style={[styles_base.margenLateral, { flex: 3 }]}>
+            <View style={[styles_base.margenLateralBase, { flex: 3 }]}>
                 {/** AQUI ESTA EL FLEX 3, SE SUBAN LOS FLEX; 2 DEL PRIMERO, 3 DE ESTE Y YA SON 5, Y CADA VIEW TOMA EL ESPACIO SEGUN SU NÚMERO 
                  * USAR styles_base.margenLateral PARA COLOCAR LOS MARGENES( ESPACIOS LATERALES), ASI EVITARAS COLOCAR WIDTH A TODOS LOS COMPONENTES DE ADENTRO
                 */}
@@ -84,15 +72,13 @@ export default function Login({ navigation }) {
                     </Text>
                     <Button
                         touchableOpacity
-                        mode="contained"
-                        color="yellow"
+                        mode="contained" onPress={() => navigation.navigate("Registro")} color="yellow"
                         style={{
                             marginBottom: 10, backgroundColor: 'white',
                             borderRadius: 10,
                             borderWidth: 1,
                             borderColor: '#FFBE00'
-                        }}
-                        onPress={() => navigation.navigate("signup")}
+                        }} 
                     >
                         <Text
                             style={{ color: "#FFBE00" }}>

@@ -3,17 +3,12 @@ import { StyleSheet } from 'react-native';
 export const styles_base = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    width: '100%',
-    height: '100%',
+    backgroundColor: '#fff'
   },
-  margenLateral: {
+  margenLateralBase: {
     paddingHorizontal: "5%"
   },
-  margenLateral1: {
-    paddingHorizontal: "5%"
 
-  },
   renglon_centrado: {
     display: "flex",
     flexDirection: "row",
@@ -32,40 +27,11 @@ export const styles_base = StyleSheet.create({
     justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
     borderRadius: 10
   },
-  boton_primario1: {/**SEGUNDA PANTALLA*/
-    backgroundColor: "#FFBE00",
-    width: "100%",
-    color: "#000",
-    height: 60,
-    display: "flex",/** USAR DISTRIBUCIÓN FLEX ( METODO DE ACOMODAR COMPONENTES) */
-    flexDirection: "column", /** QUE SEA EN COLUMNA */
-    justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
-    borderRadius: 10
-    
 
-  },
-  boton_primario2: {/**TERCER PANTALLA*/
-    backgroundColor: "#FFBE00",
-    width: "100%",
-    color: "#000",
-    height: 60,
-    display: "flex",/** USAR DISTRIBUCIÓN FLEX ( METODO DE ACOMODAR COMPONENTES) */
-    flexDirection: "column", /** QUE SEA EN COLUMNA */
-    justifyContent: "center",/**CENTRAR VERTICALMENTE EN COLUMNA */
-    borderRadius: 10
-    
-
-  },
-  btn_txt_negro:{/**PRIMER PANTALLA*/
-    color: "#000", fontWeight: "600" 
+  btn_txt_negro: {/**PRIMER PANTALLA*/
+    color: "#000", fontWeight: "600"
   },
 
-  btn_txt_negro1:{/**SEGUNDA PANTALLA*/
-    color: "#000", fontWeight: "600" 
-  },
-  btn_txt_negro2:{/**TERCERA PANTALLA*/
-  color: "#000", fontWeight: "600" 
-},
   scrollView: {
     width: '100%',
     height: '100%',
@@ -80,7 +46,7 @@ export const styles_base = StyleSheet.create({
     flex: 1,
     justifyContent: "space-between",
     width: "100%",
-    borderRadius: "20px",
+    borderRadius: 20,
 
   },
   portada_distribucion: {
@@ -88,7 +54,7 @@ export const styles_base = StyleSheet.create({
   },
   portada_Maistro: {
     color: "#fff",
-    fontWeight: 900,
+    fontWeight: "900",
     fontSize: 50
   },
   portada_subtitulo: {
@@ -98,10 +64,29 @@ export const styles_base = StyleSheet.create({
   },
   portada_titulo: {
     color: "#fff",
-    fontWeight: 600,
+    fontWeight: "600",
     fontSize: 40
+  },
+  itemsLista: {
+    padding: 10,
+    fontSize: 20,
+    fontWeight: "400",
+    borderColor: "#e2e2e2",
+    borderWidth: 1,
+    borderStyle: "solid"
+  },
+  sizeback: {
+    fontSize: 35
+  },
+  menusSuperior: {
+    backgroundColor: "#fff"
+  },
+  inputRegistro: {
+    marginTop: 5, height: 50, marginBottom: 15, backgroundColor: '#fff',
+    borderBottomColor: '#ECECEC', borderRadius: 50, margin: 5,
+    borderWidth: 3, borderColor: "#ECECEC", borderRadius: 8, shadowColor: "black"
   }
- 
+
 });
 
 export const colores = StyleSheet.create({
@@ -122,3 +107,4 @@ export const colores = StyleSheet.create({
 
   }
 });
+
