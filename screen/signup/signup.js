@@ -37,6 +37,7 @@ export default function Signup({ navigation }) {
             <Appbar.Header style={styles_base.menusSuperior}  >
                 <Appbar.BackAction onPress={() => { navigation.navigate("Login") }} color={valores.yellow} size={valores.backSize} />
             </Appbar.Header>
+            
             <View style={styles_basepantallas.container}>
                 <View style={{ flex: 3, height: "100%", justifyContent: "flex-end" }}>
                     <Text
@@ -53,11 +54,7 @@ export default function Signup({ navigation }) {
                         underlineColor='transparent'
                         value={correo}
                         onChangeText={text => setCorreo(text)}
-                        style={{
-                            marginTop: 5, height: 50, marginBottom: 15, backgroundColor: "E5E5E5", margin: 5,
-                            borderWidth: 3, borderColor: "#ECECEC", borderRadius: 8, elevation: 0, shadowOpacity: 0, shadowRadius: 0, shadowOffset: 0,
-                            shadowColor: "black", textShadowRadius: 1
-                        }}
+                        style={[styles_base.inputLogin]}
 
 
                     />
@@ -66,11 +63,7 @@ export default function Signup({ navigation }) {
                         underlineColor='transparent'
                         value={passWord}
                         onChangeText={text2 => setPassWord(text2)}
-                        style={{
-                            marginTop: 5, height: 50, marginBottom: 15, backgroundColor: "E5E5E5", margin: 5,
-                            borderWidth: 3, borderColor: "#ECECEC", borderRadius: 8, elevation: 0, shadowOpacity: 0, shadowRadius: 0, shadowOffset: 0,
-                            shadowColor: "black", textShadowRadius: 1
-                        }}
+                        style={[styles_base.inputLogin]}
                         secureTextEntry
 
 
@@ -80,11 +73,7 @@ export default function Signup({ navigation }) {
                         underlineColor='transparent'
                         value={passWordC}
                         onChangeText={text3 => setPassWordC(text3)}
-                        style={{
-                            marginTop: 5, height: 50, marginBottom: 25, backgroundColor: "E5E5E5", margin: 5,
-                            borderWidth: 3, borderColor: "#ECECEC", borderRadius: 8, elevation: 0, shadowOpacity: 0, shadowRadius: 0, shadowOffset: 0,
-                            shadowColor: "black", textShadowRadius: 1
-                        }}
+                        style={[styles_base.inputLogin]}
                         secureTextEntry
 
 
@@ -95,7 +84,7 @@ export default function Signup({ navigation }) {
                         mode="contained"
                         onPress={() => verificar()}
                         style={styles_basepantallas.boton_continuar} >
-                        <Text style={{ fontStyle: 'normal', width: "105", height: "24" }}>  </Text>
+                        <Text style={{ fontStyle: 'normal', width: "105", height: 24 }}>  </Text>
                         <Text
                             style={styles_basepantallas.btn_texnegro}>
                             Continuar
@@ -104,7 +93,7 @@ export default function Signup({ navigation }) {
                     </Button>
                     <Text
                         style={{
-                            color: '#565656', marginBottom: 40, textAlign: "right", width: "370", height: "68",
+                            color: '#565656', marginBottom: 40, textAlign: "right", width: 370, height: 68,
                             textAlign: "center", justifyContent: "center"
                         }}
                         onPress={() => Linking.openURL('http://google.com')}>
@@ -121,12 +110,12 @@ export default function Signup({ navigation }) {
                         <Text
                             style={{ color: '#565656', marginBottom: 10, textAlign: "center" }}
                             onPress={() => Linking.openURL('http://google.com')}>
-                            <Text style={{ width: "154", height: "20" }}>
+                            <Text style={{ width: "154", height: 20 }}>
                                 ¿Aun no te has registrado?
                             </Text>
                             <Text
                                 onPress={() => navigation.navigate("login")}
-                                style={{ textDecorationLine: 'underline', fontWeight: 'bold', width: "92", height: "20" }}>
+                                style={{ textDecorationLine: 'underline', fontWeight: 'bold', width: "92", height: 20 }}>
                                 Inicia Sesión
                             </Text>
                         </Text>

@@ -57,7 +57,7 @@ export default function Signup_complet ({ navigation }) {
                             placeholder='numbers'
                             keyboardType='numeric'
                             underlineColor='transparent'
-                            style={{ marginTop: 5, height: 55, marginBottom: 15,backgroundColor: "E5E5E5", margin: 5,
+                            style={{ marginTop: 5, height: 55, marginBottom: 15,backgroundColor: "#E5E5E5", margin: 5,
                             borderWidth: 3, borderColor: "#ECECEC",borderRadius: 8, 
                             shadowColor: "black" , textShadowRadius: 1, boton_continuar1: 'flex'  }}
                             

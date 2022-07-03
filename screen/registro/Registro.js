@@ -1,6 +1,6 @@
-import { ImageBackground, Text, View, SafeAreaView, FlatList, ScrollView } from 'react-native';
+import { ActivityIndicator, Text, View, SafeAreaView, FlatList, ScrollView } from 'react-native';
 import { Button, Colors, ProgressBar } from 'react-native-paper';
-import { TextInput, List, IconButton } from 'react-native-paper';
+import { TextInput } from 'react-native-paper';
 import { useState } from 'react';
 import * as React from 'react';
 import { Appbar } from 'react-native-paper';
@@ -24,6 +24,7 @@ export default function Registro({ route, navigation, ...props }) {
   const [company, setCompany] = useState("dadoroom")
   const [industria, setIndustria] = useState("");
   const [Ubicacion, setUbicacion] = useState("");
+  const [loading, setLoading] = useState(false)
 
   const inputNombre = (text) => {
     setNombre(text);
@@ -96,6 +97,15 @@ export default function Registro({ route, navigation, ...props }) {
             registro(datos)
           }
   }
+
+  if(!loading){
+    return (
+      <View>
+        <ActivityIndicator/>   
+      </View>
+    )
+  }
+
 
   return (
     <>

@@ -30,7 +30,7 @@ export default function Getstarted({ route, navigation, ...props }) {
                         <Text
                             style={{
                                 color: '#000', marginBottom: 10, width: "100%",
-                                fontWeight: 700, fontSize: 28, fontStyle: 'normal', fontWeight: 'bold'
+                                fontSize: 28, fontStyle: 'normal', fontWeight: "900"
                             }}>
                             Cuentanos mas de tu negocio
 
@@ -40,9 +40,9 @@ export default function Getstarted({ route, navigation, ...props }) {
                                 color: '##707070',
                                 marginBottom: 20,
                                 textAlign: "left", width: "100%",
-                                fontWeight: 400, fontSize: 13,
+                                fontWeight: "400", fontSize: 13,
                                 alignItems: "center",
-                                width: "100%", height: 51, flex: "center"
+                                width: "100%", height: 51
 
                             }}>
 

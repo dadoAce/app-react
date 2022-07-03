@@ -85,8 +85,22 @@ export const styles_base = StyleSheet.create({
     marginTop: 5, height: 50, marginBottom: 15, backgroundColor: '#fff',
     borderBottomColor: '#ECECEC', borderRadius: 50, margin: 5,
     borderWidth: 3, borderColor: "#ECECEC", borderRadius: 8, shadowColor: "black"
+  },
+  inputLogin: {
+    marginTop: 5,
+    height: 50,
+    marginBottom: 15,
+    backgroundColor: "#E5E5E5",
+    margin: 5,
+    borderWidth: 3,
+    borderColor: "#ECECEC",
+    borderRadius: 8,
+    elevation: 0,
+    shadowOpacity: 0,
+    shadowRadius: 0,
+    shadowColor: "black",
+    textShadowRadius: 1
   }
-
 });
 
 export const colores = StyleSheet.create({
